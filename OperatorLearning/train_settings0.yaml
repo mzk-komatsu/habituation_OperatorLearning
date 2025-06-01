@@ -1,0 +1,11 @@
+ep: 1000
+model_name: "fno"
+sys_name: "TysonAL2D"
+sub_int: 5
+modes: 3
+recov: 0
+learning_rate : 0.001
+step_size: 50
+gamma: 0.5
+L: 4
+width : 64

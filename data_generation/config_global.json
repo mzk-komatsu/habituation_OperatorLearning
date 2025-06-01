@@ -1,0 +1,8 @@
+{
+  "split": 2,
+  "recov_rate": 0.1,
+  "numi": 2,
+  "numo": 4,
+  "pred_rate": 0.25,
+  "ht_thres": 0.01
+}

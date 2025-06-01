@@ -1,0 +1,65 @@
+{
+  "config_name": "sample",
+  "data_folder_name": "data_sample",
+  "T": 1,
+  "num_dp": 2048,
+  "num_input_func": 1000,
+  "rate": [
+    0.8,
+    0.2
+  ],
+  "sys": "CMinimal",
+  "sys_params": [
+    1,
+    2,
+    1,
+    2,
+    1,
+    100
+  ],
+  "dim_sys": 3,
+  "input_func": "square_mix",
+  "F": 30,
+  "w": 10,
+  "out_var": 2,
+  "freq": [
+    9.5,
+    1.5
+  ],
+  "ranges": [
+    [
+      9.5,
+      1.5
+    ],
+    [
+      8.5,
+      0.5
+    ],
+    [
+      9.5,
+      0.5
+    ],
+    [
+      10.5,
+      0.5
+    ]
+  ],
+  "num_data": [
+    [
+      200,
+      800
+    ],
+    [
+      50,
+      200
+    ],
+    [
+      50,
+      200
+    ],
+    [
+      50,
+      200
+    ]
+  ]
+}

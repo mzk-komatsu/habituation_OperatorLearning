@@ -143,7 +143,6 @@ habituation-OperatorLearning/
   - **width** : # width of each layer in Neural Operator (e.g., 64)
 
 - `pred_settingsM.yaml` 
-  - **sys_name**: name of habituating system (e.g., "`TysonAL2D`")
   - **recov**: whether input data set contain repetitive stimuli with recovery stimulus (0: no recovery stimuli, 1: all input functions contain recovery stimuli, 2: some of input functions contain recovery stimuli)
   - **ranges_id**: id of ranges to be evaluated (refer to [Habituation_Sys].json in data_generation folder) (e.g., [1,2,3])
 

@@ -1,6 +1,7 @@
 # habituation_OperatorLearning 
 
-Implementation of our paper, M. Komatsu, T. Yasui, T. Ohkawa, C. Budd, *"Data-driven modeling of habituation with its frequency-dependent hallmark based on Fourier Neural Operator."* (Nonlinear Theory and Its Applications, IEICE (NOLTA), in press.)
+Implementation of our paper, 
+M. Komatsu, T. Yasui, T. Ohkawa, C. Budd, *"Data-driven modeling of habituation with its frequency-dependent hallmark based on Fourier Neural Operator,"* Nonlinear Theory and Its Applications, IEICE (NOLTA), to appear.
 
 ## Environments
 

@@ -38,7 +38,7 @@ habituation-OperatorLearning/
 │   ├── functions.py
 │   ├── functions_donet.py
 │   ├── models.py          # FNO/LNO is defined here
-│	  │						(partially based on External Repository, see below.)
+│   │                   (partially based on External Repository, see below.)
 │   ├── hpo_config.py
 │   ├── train_settingsN.yaml # Configuration on training (N = 0,1,...)
 │   └── pred_settingsM.yaml  # Configuration on evaluation (M = 0,1,...)

@@ -64,7 +64,7 @@ habituation-OperatorLearning/
 - `path.json` 
   - Store path for `config_global.json`
 - `config_global.json` 
-  - **split**: Solve habituating system over [0, T*split] (e.g., 2)*
+  - **split**: Solve habituating system over [0, T * split] (e.g., 2)
   - **recov_rate**: Rate of the existence of recovery stimuli in (e.g., 0.1),
   - **numi**: # of paramaeters in repetitive stimuli such as F and freq[0] (use 2)
   - **numo**: # of parameters in habituating responses such as Max attenuation rate (use 4)

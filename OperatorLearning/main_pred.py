@@ -23,7 +23,7 @@ import json
 
 # Function for saving results
 # Save evaluation metrics
-def save_eval_result(exids, parent, RESULT, dmodel, sys_name):
+def save_eval_result(exids, parent, RESULT, dmodel):
     workbook = Workbook()
     for result in (RESULT):
         sheet_name = "pred"+str(exids[0])
@@ -40,7 +40,7 @@ def save_eval_result(exids, parent, RESULT, dmodel, sys_name):
 
 # Function for loading results
 # Load evaluation metrics
-def load_eval_result(exid, parent, dmodel, sys_name):
+def load_eval_result(exid, parent, dmodel):
     excel_name = parent+"/result_"+dmodel+".xlsx"
     print("\n Load:", excel_name)
     workbook = load_workbook(excel_name)
@@ -73,8 +73,10 @@ else:
         hpo = bool(strtobool(args[3]))
     else:
         hpo = False
-
-sys_name = eyml["sys_name"]
+with open(train_path, 'rb') as f:
+    tyml = yaml.safe_load(f)
+    
+sys_name = tyml["sys_name"]
 p_recov = eyml["recov"]
 ranges_id = eyml["ranges_id"]
 train_exid = train_path[-6] # id of training settings
@@ -137,5 +139,5 @@ for pid, p in enumerate(ranges_id):
 
 RESULT.append(res)
 parent = "train"+str(exids[1])+"_"+"pred"+str(exids[0])+"_"+(model_name)+"_"+sys_name
-save_eval_result(exids, parent, RESULT, model_name, sys_name)
-load_eval_result(exids[0], parent, model_name, sys_name)
+save_eval_result(exids, parent, RESULT, model_name)
+load_eval_result(exids[0], parent, model_name)

@@ -25,7 +25,7 @@ habituation-OperatorLearning/
 │   ├── data_utils.py            
 │   ├── path.json               # Specify path for "config_global.json"
 │   ├── config_global.json      # Global configuration
-│	├── other json files        # Configuration on habituating system,
+│	  ├── other json files        # Configuration on habituating system,
 │   │                           #  "config_[Habituation sys].json" 
 │   │                             ([Habituation sys].json is automatically generated)
 │   └── data_sample             # Example of datasets
@@ -37,7 +37,7 @@ habituation-OperatorLearning/
 │   ├── functions.py
 │   ├── functions_donet.py
 │   ├── models.py          # FNO/LNO is defined here
-│	│						(partially based on External Repository, see below.)
+│	  │						(partially based on External Repository, see below.)
 │   ├── hpo_config.py
 │   ├── train_settingsN.yaml # Configuration on training (N = 0,1,...)
 │   └── pred_settingsM.yaml  # Configuration on evaluation (M = 0,1,...)

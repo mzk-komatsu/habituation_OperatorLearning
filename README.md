@@ -82,7 +82,7 @@ habituation-OperatorLearning/
   - **input_func**: # Type of the input function (square or square_recov or square_mix)
   - **F**: Strength of repetitive stimuli (e.g., 30)
   - **w**: Width of a stimulus (e.g., 60, depends on num_dp)
-  - **freq**: Mean (and width) of # of stimuli in [0, T] (e.g., [9.5, 1.5], # of stimuli in [0,T] is (9.5-1.5, 9.g+1.5)
+  - **freq**: Mean (and width) of # of stimuli in [0, T] (e.g., [9.5, 1.5], # of stimuli in [0,T] is (9.5-1.5, 9.5+1.5)
     - freq does not need to be specified manually, as it will be automatically included when `main_build_datasets.py` is executed.   
           
 

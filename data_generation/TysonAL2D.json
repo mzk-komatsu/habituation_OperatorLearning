@@ -17,7 +17,7 @@
     7
   ],
   "dim_sys": 2,
-  "input_func": "square_mix",
+  "input_func": "square",
   "F": 30,
   "w": 60,
   "out_var": 1,

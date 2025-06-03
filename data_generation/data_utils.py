@@ -4,7 +4,6 @@ import numpy as np
 import os
 import sys
 import pickle
-import input_functions, data_utils
 
 def get_sysparams(data_path='../data_settings.json'):
   json_file = open(data_path, 'r')  

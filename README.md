@@ -59,7 +59,7 @@ habituation-OperatorLearning/
 
 ## Preparation
 
-### Configuration for dataset generation (habituation-OperatorLearning/data_generation)
+### Configuration for dataset generation (habituation_OperatorLearning/data_generation)
 
 - `path.json` 
   - Store path for `config_global.json`

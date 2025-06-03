@@ -77,3 +77,20 @@ def display_input(T=1,num_dp=1000,num_input_func=10, F=10,freq=[12,2],method="ga
     plt.savefig(fname+".png")
   plt.show()
   return Xf, stimulus_t
+
+def approx_step(T, num_dp, F, params,w):
+  time = np.linspace(0, T, num_dp, endpoint=False)
+  input_func_data = np.zeros((len(params),num_dp))
+  stimulus_time = []
+  for i in range(len(params)):
+    input_t_idx = np.arange(0,num_dp,int(num_dp/T/params[i]))
+    temp = []
+    """
+    for j in range(w):
+      temp = temp + (input_t_idx + j).tolist()
+    on_t_idx = np.array(list(set(temp)))
+    on_t_idx = np.delete(on_t_idx, np.where(on_t_idx >= num_dp))
+    """
+    input_func_data[i,w:] = F
+    stimulus_time.append((time[input_t_idx]).tolist())
+  return input_func_data, stimulus_time

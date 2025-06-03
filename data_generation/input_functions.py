@@ -14,7 +14,6 @@ from IPython.display import HTML
 from scipy import interpolate, signal
 from scipy.signal import find_peaks
 import random
-from scipy.integrate import trapz, simps, quad
 
 def generate_input_t_data(T, num_dp):
   return np.arange(0,T,T/num_dp).reshape(num_dp,1)

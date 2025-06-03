@@ -76,26 +76,6 @@ def get_cumnum_stimulus(stimulus_t, habiuated_timepoint):
 
 def get_habituation_time(stimulus_t, ydata, threshold, T, num_dp):
   """
-  Compute habituation time defined as Lina Eckert
-  https://vcp.med.harvard.edu/papers/thesis-lina-eckert-MSc-ETH.pdf
-  """
-  peaks, _ = get_peak_trough(ydata)
-  peaks_t = np.array(peaks[0])
-  peaks_val = np.array(peaks[1])
-  #troughs_t = np.array(troughs[0])
-  #troughs_val = np.array(troughs[1])
-  d = -np.diff(peaks_val)/peaks_val[:-1]
-  temp = np.where(d<threshold)
-  if len(temp[0]) != 0:
-    ht_idx = temp[0][0] # habituation
-    ht = get_cumnum_stimulus(stimulus_t, (T/num_dp)*peaks_t[ht_idx])
-    return ht, peaks_t, peaks_t[ht_idx]
-  else:
-    ht=0 #no habituation
-    return ht, peaks_t, 0
-
-def get_habituation_time(stimulus_t, ydata, threshold, T, num_dp):
-  """
   Compute habituation time as defined in the following thesis 
   https://vcp.med.harvard.edu/papers/thesis-lina-eckert-MSc-ETH.pdf
   """
@@ -108,7 +88,7 @@ def get_habituation_time(stimulus_t, ydata, threshold, T, num_dp):
   temp = np.where(d<threshold)
   if len(temp[0]) != 0:
     ht_idx = temp[0][0] # habituation
-    ht = get_cumnum_stimulus(stimulus_t, (1/num_dp)*peaks_t[ht_idx])
+    ht = get_cumnum_stimulus(stimulus_t, (T/num_dp)*peaks_t[ht_idx])
     return ht, peaks_t, peaks_t[ht_idx]
   else:
     ht=0 #no habituation

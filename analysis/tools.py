@@ -96,7 +96,7 @@ def get_habituation_time(stimulus_t, ydata, threshold, T, num_dp):
 
 def get_habituation_time(stimulus_t, ydata, threshold, T, num_dp):
   """
-  Compute habituation time defined as Lina Eckert
+  Compute habituation time as defined in the following thesis 
   https://vcp.med.harvard.edu/papers/thesis-lina-eckert-MSc-ETH.pdf
   """
   peaks, _ = get_peak_trough(ydata)

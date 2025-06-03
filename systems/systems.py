@@ -17,7 +17,7 @@ from scipy import interpolate
 def TysonAL2D(x,t,inp, a):
   s = a[-1]
   x1_rhs = s*(a[0]*inp-a[2]*x[0])
-  x2_rhs = s*(a[1]*inp-a[3]*x[0]*x[1]; #a[1]*inp-a[3]*x[0]*x[1])
+  x2_rhs = s*(a[1]*inp-a[3]*x[0]*x[1]) 
   return np.array([x1_rhs, x2_rhs])
 
 # NegativeFB (Negative feedback[1])

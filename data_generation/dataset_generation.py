@@ -18,19 +18,6 @@ sys.path.append("../systems")
 sys.path.append("../analysis")
 from tools import get_output_params
 import systems as hs
-
-def get_rhs(sys):
-  if sys == "TysonAL2D":
-    rhs_inp = hs.TysonAL2D_input_interporate
-  elif sys == "NegativeFB":
-    rhs_inp = hs.NegativeFB_input_interporate
-  elif sys == "GMinimal":
-    rhs_inp = hs.GMinimal_input_interporate
-  elif sys == "CMinimal":
-    rhs_inp = hs.CMinimal_input_interporate
-  elif sys == "Test":
-    rhs_inp = hs.Test_input_interporate
-  return rhs_inp
   
 args = sys.argv
 print(args)
@@ -62,7 +49,7 @@ if numi == 2:
     params = freq[0]-freq[1]*np.random.rand((num_input_func))
 
 # Define habituating system
-rhs_inp = get_rhs(sys)
+rhs_inp = hs.get_rhs(sys)
 
 """
 Generate input data (input to branch: Xf_*, input to trunk: Xt_*, * is whether train or test)

@@ -72,3 +72,16 @@ def CMinimal_input_interporate(x, t, a0, xt, xf):
     return CMinimal(x, t, input, a0)
 
 
+def get_rhs(sys):
+  if sys == "TysonAL2D":
+    rhs_inp = TysonAL2D_input_interporate
+  elif sys == "NegativeFB":
+    rhs_inp = NegativeFB_input_interporate
+  elif sys == "GMinimal":
+    rhs_inp = GMinimal_input_interporate
+  elif sys == "CMinimal":
+    rhs_inp = CMinimal_input_interporate
+  return rhs_inp
+  
+
+

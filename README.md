@@ -116,7 +116,7 @@ habituation-OperatorLearning/
 
 
 
-### Configuration for Operator Learning (habituation-OperatorLearning/OperatorLearning)
+### Configuration for Operator Learning (habituation_OperatorLearning/OperatorLearning)
 
 - `train_settingsN.yaml`
 

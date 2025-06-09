@@ -126,7 +126,7 @@ habituation-OperatorLearning/
 
   - **sys_name**: name of habituation system (e.g., "TysonAL2D")
 
-  - **sub_int**: log2 of the # of time points in [0, 1] (e.g., 5 ---> 2^5 time points in [0, 1])
+  - **sub_int**: an integer that determines the coarseness of downsampling (e.g., 5 ---> # of data points in [0,1] is num_dp/2^5)
 
   - **modes**: #  of modes in Neural Operator (e.g., 3)
 

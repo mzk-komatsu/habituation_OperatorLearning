@@ -97,3 +97,34 @@ def get_habituation_time(stimulus_t, ydata, threshold, T, num_dp):
 def get_recovery_time(data):
   # TODO
   return rt
+
+
+# Given response trajectory,
+# compute habituation/recovery features and flags
+# Ref. ) https://www.pnas.org/doi/pdf/10.1073/pnas.2409330121 (Hallmark 1)
+def check_habituation(y, eps = 0):
+    peaks_t, tmp = find_peaks(y)
+    habituation_flag1 = False
+    habituation_flag2 = True
+    habituation_flag = False
+    peaks = [y[i] for i in peaks_t]
+    for i in range(len(peaks_t)):
+        if i < len(peaks_t)-1:
+            peak = peaks[i] #y[peaks_t[i]]
+            peak_next = peaks[i+1] #y[peaks_t[i+1]]
+            if peak_next < peak: # Strict decrement condition
+                if i > 0 and habituation_flag1 == False:
+                    habituation_flag1 = True
+                    dt_idx = i+2
+                    dt_time = peaks_t[dt_idx-1]
+                    dt_peak = y[dt_time]
+            if peak_next > peak + eps: # Weak decrement condition (eps is introduced considering numerical error)
+                habituation_flag2 = False
+    if habituation_flag1 == True and habituation_flag2 == True:
+        habituation_flag = True
+    else:
+        dt_idx = -1
+        dt_time = 0
+        dt_peak = 0
+    dt_all = [dt_idx, dt_time, dt_peak] # Number of stimuli, time index, peak value
+    return [habituation_flag1, habituation_flag2, habituation_flag], dt_all, peaks_t, peaks

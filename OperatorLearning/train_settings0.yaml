@@ -1,7 +1,7 @@
 ep: 1000
 model_name: "fno"
 sys_name: "TysonAL2D"
-sub_int: 5
+sub_int: 4
 modes: 3
 recov: 0
 learning_rate : 0.001

@@ -8,4 +8,4 @@ learning_rate : 0.001
 step_size: 50
 gamma: 0.5
 L: 4
-width : 64
+width : 75

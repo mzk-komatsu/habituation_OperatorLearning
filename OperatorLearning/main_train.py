@@ -19,7 +19,7 @@ from distutils.util import strtobool
 #   - ep: # of epochs (e.g., 1000)
 #   - model_name: name of deep learning model (e.g., "fno")
 #   - sys_name: name of habituation system (e.g., "TysonAL2D")
-#   - sub_int: log2 of the # of time points in [0, 1] (e.g., 5 ---> 2^5 time points in [0, 1])
+#   - sub_int: an integer that determines the coarseness of downsampling (e.g., 5 ---> # of data points in [0,1] is num_dp/2^5)
 #   - modes: # of modes in Neural Operator (e.g., 3)
 #   - recov: whether input data set contain repetitive stimuli with recovery stimulus (0: no recovery stimuli, 1: all input functions contain recovery stimuli, 2: some of input functions contain recovery stimuli)
 #   - learning_rate : Initial learning rate (e.g., 0.001)

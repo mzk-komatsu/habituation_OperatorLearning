@@ -91,6 +91,6 @@ def approx_step(T, num_dp, F, params,w):
     on_t_idx = np.array(list(set(temp)))
     on_t_idx = np.delete(on_t_idx, np.where(on_t_idx >= num_dp))
     """
-    input_func_data[i,w:] = F
+    input_func_data[i,:] = F
     stimulus_time.append((time[input_t_idx]).tolist())
   return input_func_data, stimulus_time
